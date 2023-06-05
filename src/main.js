@@ -1,4 +1,8 @@
+// 使用require()函数引入vue模块
 const { createApp } = require('vue');
-import App from "./App.vue";
-
-createApp(App).mount("#app");
+// 引入包含App组件的文件，通常是App.vue文件（这里使用ES6模块导入）
+import App from './App.vue';
+//createApp()函数的参数可以是一个Vue组件对象或一个包含Vue组件的JavaScript模块。
+// 我们将App.vue文件导入，并传递给createApp()函数，这样createApp()函数就会创建一个Vue应用实例，并将App组件作为根组件挂载到应用程序的指定DOM元素上。
+// 我们使用mount()函数将应用程序实例挂载到指定的DOM元素上，以启动应用程序。在这个示例中，我们将应用实例挂载到id为"app"的DOM元素中。这意味着App组件将被渲染到id为"app"的元素内。如果该元素不存在，将会抛出错误。
+createApp(App).mount('#app');
