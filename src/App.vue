@@ -4,7 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <!-- 标签名需要使用组件的名称 -->
     <hello msg="hello" />
-    <test1 msg="test1"/>
+    <test1 msg="test1" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ import test1 from './components/test1.vue';
 
 export default {
   name: 'App',
-  // 这里引用上面定义的组件文件的名称，从而在template中可以通过同样名称的标签名就能使用整个组件的内容
+  // 这里引用上面定义的组件文件的名称，从而在template中可以通过同样名称的标签名就能使用整个组件的内容，也就是注册子组件
   components: {
     HelloWorld,
     hello,
