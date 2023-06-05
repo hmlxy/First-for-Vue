@@ -4,6 +4,10 @@
 
 <script>
 export default {
+  name:'hello',
+  props: {
+    msg:String
+  },
   data() {
     return {
       count: 0,

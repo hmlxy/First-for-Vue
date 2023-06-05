@@ -2,6 +2,9 @@
   <div id="app">
     <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!-- 引入组件需要使用组件的标签名 -->
+    <hello msg="good" />
+    <hello msg="goodyes" />
   </div>
 </template>
 
@@ -28,4 +31,3 @@ export default {
   margin-top: 60px;
 }
 </style>
-
