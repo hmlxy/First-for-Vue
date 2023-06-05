@@ -5,6 +5,7 @@
     <!-- 标签名需要使用组件的名称 -->
     <hello msg="hello" />
     <test1 msg="test1" />
+    <test2 ></test2>
   </div>
 </template>
 
@@ -13,6 +14,7 @@
 import HelloWorld from './components/HelloWorld.vue';
 import hello from './components/hello.vue';
 import test1 from './components/test1.vue';
+import test2 from './components/test2.vue';
 
 export default {
   name: 'App',
@@ -21,6 +23,7 @@ export default {
     HelloWorld,
     hello,
     test1,
+    test2,
   },
 };
 </script>
