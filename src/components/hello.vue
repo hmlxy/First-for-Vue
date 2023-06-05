@@ -19,5 +19,6 @@ export default {
 <style scoped>
 button {
   font-weight: bold;
+  height:200px;
 }
 </style>
