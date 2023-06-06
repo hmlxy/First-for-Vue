@@ -26,7 +26,7 @@ export default {
   <span>{{ publishedBooksMessage }}</span>
 </template>
 
-<style>
+<style scoped>
 p {
   font-size: 24px;
 }

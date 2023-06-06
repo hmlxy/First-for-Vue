@@ -3,11 +3,26 @@
     <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <!-- 标签名需要使用组件的名称 -->
-    <hello msg="hello" />
-    <test1 msg="test1" />
-    <test2 ></test2>
+    <div class="top-btn">
+      <hello msg="hello" />
+      <test1 msg="test1" />
+    </div>
+
+    <div class="booklist">
+      <test2 ></test2>
+    </div>
+
+    <div class="helloworld gap">
+      <test3></test3>
+     </div>
+  
+
+
   </div>
 </template>
+
+
+
 
 <script>
 // 这里引入组件的文件
@@ -15,6 +30,7 @@ import HelloWorld from './components/HelloWorld.vue';
 import hello from './components/hello.vue';
 import test1 from './components/test1.vue';
 import test2 from './components/test2.vue';
+import test3 from './components/test3.vue';
 
 export default {
   name: 'App',
@@ -24,7 +40,13 @@ export default {
     hello,
     test1,
     test2,
+    test3,
   },
+
+
+
+
+
 };
 </script>
 
@@ -37,4 +59,21 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.gap {
+  margin:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>

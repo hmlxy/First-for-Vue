@@ -1,5 +1,6 @@
 <template>
-  <button @click="count++">Count is: {{ count }}</button>
+  <button id="hello-btn1" @click="count++">Count is: {{ count }}</button>
+
 </template>
 
 <script>
@@ -17,8 +18,8 @@ export default {
 </script>
 
 <style scoped>
-button {
+#hello-btn1 {
   font-weight: bold;
-  height:200px;
+  height:20px;
 }
 </style>
