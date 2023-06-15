@@ -29,5 +29,13 @@ export default {
 </script>
 
 <template>
-  <button @click="increment">Count is: {{ count }}</button>
+  <button id="btn1" @click="increment">Count is: {{ count }}</button>
 </template>
+
+<style scoped>
+#btn1{
+  height:40px;
+  width:200px;
+  font-size:24px;
+}
+</style>

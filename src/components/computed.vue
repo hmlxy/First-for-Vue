@@ -5,9 +5,9 @@ export default {
       author: {
         name: 'John Doe',
         books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery',
+          {book:'Vue 2 - Advanced Guide'},
+          {book:'Vue 3 - Basic Guide'},
+          {book:'Vue 4 - The Mystery'},
         ],
       },
     };
@@ -22,8 +22,11 @@ export default {
 
 <template>
   <p>Has published books:</p>
-  <p>this is an compute</p>
-  <span>{{ publishedBooksMessage }}</span>
+  <p>{{ publishedBooksMessage }}</p>
+  <li v-for="(item,index) in author.books">
+    {{author.name}}-{{item.book}}
+  
+  </li>
 </template>
 
 <style scoped>
