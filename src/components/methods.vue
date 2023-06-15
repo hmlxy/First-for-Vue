@@ -16,14 +16,14 @@ export default {
   // 它们可以在模板中作为事件处理器绑定
   methods: {
     increment() {
-      this.count++;
+      this.count+=2;
     },
   },
 
   // 生命周期钩子会在组件生命周期的各个不同阶段被调用
   // 例如这个函数就会在组件挂载完成后被调用
   mounted() {
-    console.log(`The initial count is ${this.count}.`);
+    console.log(`The initial count is ${this.count}`);
   },
 };
 </script>

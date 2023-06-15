@@ -4,7 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <!-- 标签名需要使用组件的名称 -->
     <div class="mounted gap">
-      <mounted></mounted>
+      <methods></methods>
     </div>
   
     <div class="computed gap">
@@ -30,7 +30,7 @@
 <script>
 // 这里引入组件的文件
 import HelloWorld from './components/HelloWorld.vue';
-import mounted from './components/mounted.vue';
+import methods from './components/methods.vue';
 import computed from './components/computed.vue';
 import vif from './components/vif.vue';
 import vfor from './components/vfor.vue';
@@ -40,7 +40,7 @@ export default {
   // 这里引用上面定义的组件文件的名称，从而在template中可以通过同样名称的标签名就能使用整个组件的内容，也就是注册子组件
   components: {
     HelloWorld,
-    mounted,
+    methods,
     computed,
     vif,
     vfor
