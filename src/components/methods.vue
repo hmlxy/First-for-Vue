@@ -30,6 +30,7 @@ export default {
 
 <template>
   <button id="btn1" @click="increment">Count is: {{ count }}</button>
+  <!-- 这里绑定了increment方法，也就是点击就会调用，而后面的count也会随之更新 -->
 </template>
 
 <style scoped>
