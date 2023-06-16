@@ -40,6 +40,10 @@
 
 
 <script>
+// 导入需要用到的
+
+
+
 // 这里引入组件的文件
 import HelloWorld from './components/HelloWorld.vue';
 import methods from './components/methods.vue';

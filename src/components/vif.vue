@@ -1,4 +1,5 @@
 <script>
+
 export default {
   data() {
     return {
@@ -23,7 +24,6 @@ export default {
   <h1 v-else>ok:{{ ok }}</h1>
 
   <template v-if="ok">
-    <router-view></router-view>
     <h1>Title</h1>
     <p>Paragraph 1</p>
     <p>Paragraph 2</p>
