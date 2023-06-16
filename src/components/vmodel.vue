@@ -39,7 +39,7 @@ export default {
   </div>
  
   <div class="checkbox">
-    <H1>checkbox</H1>
+    <h1>checkbox</h1>
     <div>Checked names: {{ checkedNames }}</div>
     <!-- v-model会将value的值传递到checkNames变量中 -->
     <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
