@@ -13,6 +13,7 @@ import von from './components/von.vue';
 import vmodel from './components/vmodel.vue';
 import watch from './components/watch.vue';
 import ref from './components/ref.vue';
+import props from './components/props.vue';
 
 
 export default {
@@ -30,11 +31,16 @@ export default {
     vmodel,
     watch,
     ref,
+    props,
   },
 
   data(){
     return {
-      show:false
+       posts: [
+        { id: 1, title: 'My journey with Vue' },
+        { id: 2, title: 'Blogging with Vue' },
+        { id: 3, title: 'Why Vue is so fun' }
+      ]
     }
   },
 
@@ -87,6 +93,11 @@ export default {
     <div class="ref gap">
      <h1 class="blue">ref</h1>
     <ref> </ref>
+    </div>
+
+    <div class="props gap">
+     <h1 class="blue">props</h1>
+    <props v-for="post in posts" :title="post.title" :id="post.id"></props>
     </div>
   
 
