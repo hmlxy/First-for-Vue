@@ -4,19 +4,29 @@
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <!-- 标签名需要使用组件的名称 -->
     <div class="mounted gap">
+    <h1 class="blue">methods</h1>
       <methods></methods>
     </div>
   
     <div class="computed gap">
+     <h1 class="blue">computed</h1>
       <computed ></testcomputed2>
     </div>
 
     <div class="v-if gap">
+     <h1 class="blue">v-if</h1>
       <vif></vif>
      </div>
 
-    <div class="v-for">
+    <div class="v-for gap">
+     <h1 class="blue">v-for</h1>
       <vfor></vfor>
+    </div>
+
+     
+    <div class="v-on gap">
+    <h1 class="blue">v-on</h1>
+      <von></von>
     </div>
   
 
@@ -36,6 +46,7 @@ import methods from './components/methods.vue';
 import computed from './components/computed.vue';
 import vif from './components/vif.vue';
 import vfor from './components/vfor.vue';
+import von from './components/von.vue';
 
 
 export default {
@@ -48,7 +59,8 @@ export default {
     methods,
     computed,
     vif,
-    vfor
+    vfor,
+    von,
   },
 
   data(){
@@ -76,6 +88,10 @@ export default {
 
 .gap {
   margin:20px;
+}
+
+.blue {
+  color: blue;
 }
 
 
