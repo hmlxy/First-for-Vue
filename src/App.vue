@@ -15,6 +15,7 @@ import watch from './components/watch.vue';
 import ref from './components/ref.vue';
 import Props from './components/Props.vue';
 import Emit from './components/Emit.vue';
+import Slot from './components/Slot.vue';
 
 
 export default {
@@ -34,6 +35,7 @@ export default {
     ref,
     Props,
     Emit,
+    Slot,
   },
 
   data(){
@@ -121,6 +123,12 @@ export default {
         @ensamll-text="postFontSize -= 0.1"
       ></Emit>
     </div>
+    
+    </div>
+
+    <div class="slot">
+     <h1 class="blue">Slot</h1>
+     <Slot> this is a slot</Slot>
     
     </div>
   
