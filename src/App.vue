@@ -1,3 +1,44 @@
+<script>
+// 导入需要用到的
+
+
+
+// 这里引入组件的文件
+import HelloWorld from './components/HelloWorld.vue';
+import methods from './components/methods.vue';
+import computed from './components/computed.vue';
+import vif from './components/vif.vue';
+import vfor from './components/vfor.vue';
+import von from './components/von.vue';
+import vmodel from './components/vmodel.vue';
+
+
+export default {
+  // 这里将组件命名为App
+  name: 'App',
+  
+  // 这里引用上面定义的组件文件的名称，从而在template中可以通过同样名称的标签名就能使用整个组件的内容，也就是注册子组件
+  components: {
+    HelloWorld,
+    methods,
+    computed,
+    vif,
+    vfor,
+    von,
+    vmodel,
+  },
+
+  data(){
+    return {
+      show:false
+    }
+  },
+
+
+};
+</script>
+
+
 <template>
   <div id="app">
     <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
@@ -28,6 +69,11 @@
     <h1 class="blue">v-on</h1>
       <von></von>
     </div>
+    
+    <div class="v-model gap">
+     <h1 class="blue">v-model</h1>
+     <vmodel></vmodel>
+    </div>
   
 
 
@@ -39,43 +85,6 @@
 
 
 
-<script>
-// 导入需要用到的
-
-
-
-// 这里引入组件的文件
-import HelloWorld from './components/HelloWorld.vue';
-import methods from './components/methods.vue';
-import computed from './components/computed.vue';
-import vif from './components/vif.vue';
-import vfor from './components/vfor.vue';
-import von from './components/von.vue';
-
-
-export default {
-  // 这里将组件命名为App
-  name: 'App',
-  
-  // 这里引用上面定义的组件文件的名称，从而在template中可以通过同样名称的标签名就能使用整个组件的内容，也就是注册子组件
-  components: {
-    HelloWorld,
-    methods,
-    computed,
-    vif,
-    vfor,
-    von,
-  },
-
-  data(){
-    return {
-      show:false
-    }
-  },
-
-
-};
-</script>
 
 
 

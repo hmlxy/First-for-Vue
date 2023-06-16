@@ -36,18 +36,21 @@ export default {
 
 <template>
   <!-- 注意v-for的元素位置是固定的 -->
+  <h1>array</h1>
   <li v-for="(item, index) in items">
    {{title}} -奥林- {{ index }} - {{'中国队'}}- {{ item.message }}  - {{item.score}}
   </li>
-
+  <h1>object</h1>
   <div class="value" v>
     <div v-for="(value, key, index) in myObject">
     {{ index }}. {{ key }}: {{ value }}
     </div>
   </div>
 
+  <h1>computed</h1>
   <li v-for="n in evenNumbers">{{ n }}</li>
 
+  <h1>methods</h1>
     <ul v-for="numbers in sets">
      <li v-for="n in even(numbers)">{{ n }}</li>
     </ul>

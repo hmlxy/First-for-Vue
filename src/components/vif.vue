@@ -12,19 +12,13 @@ export default {
 </script>
 
 <template >
-  <button id="test3-top_btn" @click="awesome = !awesome">
-    cilck to transform words
-  </button>
-  <!-- awosome = ！aswsome是一个赋值，不是判断 -->
-  <h1 v-if="awesome">Vue is awesome!</h1>
-  <h1 v-else>Oh no 😢</h1>
+
 
   <button id="test3-top_btn" @click="ok = !ok">change ok</button>
   <h1 v-if="ok">ok:{{ ok }}</h1>
   <h1 v-else>ok:{{ ok }}</h1>
 
   <template v-if="ok">
-    <h1>Title</h1>
     <p>Paragraph 1</p>
     <p>Paragraph 2</p>
   </template>

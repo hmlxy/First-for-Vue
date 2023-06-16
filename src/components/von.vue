@@ -6,20 +6,40 @@ export default {
     }
   },
   methods: {
-    greet(event) {
-      // `this` inside methods points to the current active instance
-      alert(`Hello ${this.name}!`)
-      // `event` is the native DOM event
+    say(message) {
+      alert(message)
+    },
+
+    warn(message, event) {
+      // 这里可以访问 DOM 原生事件
       if (event) {
-        alert(event.target.tagName)
+        event.preventDefault()
       }
-    }
-  }
-}
+      alert(message)
+   },
+
+  },
+
+};
 </script>
 
 <template>
-	<button class="von_btn" @click="greet">Greet</button>
+
+  <button class="von_btn" @click="say('hello')">Say hello</button>
+  <button class="von_btn" @click="say('bye')">Say bye</button>
+
+  <!-- 使用特殊的 $event 变量 -->
+<button  class="von_btn" @click="warn('use &event.', $event)">
+  Submit
+</button>
+
+<!-- 使用内联箭头函数 -->
+<button  class="von_btn" @click="(event) => warn('ues (event) => ', event)">
+  Submit
+</button>
+
+
+
 </template>
 
 <style>
