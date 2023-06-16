@@ -14,6 +14,7 @@ import vmodel from './components/vmodel.vue';
 import watch from './components/watch.vue';
 import ref from './components/ref.vue';
 import Props from './components/Props.vue';
+import Emit from './components/Emit.vue';
 
 
 export default {
@@ -32,6 +33,7 @@ export default {
     watch,
     ref,
     Props,
+    Emit,
   },
 
   data(){
@@ -40,7 +42,9 @@ export default {
         { id: 1, title: 'My journey with Vue' },
         { id: 2, title: 'Blogging with Vue' },
         { id: 3, title: 'Why Vue is so fun' }
-      ]
+      ],
+
+      postFontSize: 1
     }
   },
 
@@ -97,7 +101,27 @@ export default {
 
     <div class="props gap">
      <h1 class="blue">Props</h1>
-    <Props v-for="post in posts" :title="post.title" :id="post.id"></Props>
+     <!-- :title,:id用来向子组件传数据，：key用来标注组件唯一，保证重用组件的唯一性 -->
+    <Props v-for="post in posts" 
+    :title="post.title" 
+    :id="post.id"
+    :key="post.id">
+    </Props>
+    </div>
+
+    <div class="emit gap">
+    <h1 class="blue">Emit</h1>
+    <div :style="{ 'font-size': postFontSize + 'em' }">
+      <Emit
+        v-for="post in posts"
+        :id="post.id"
+        :key="post.id"
+        :title="post.title"
+        @enlarge-text="postFontSize += 0.1"
+        @ensamll-text="postFontSize -= 0.1"
+      ></Emit>
+    </div>
+    
     </div>
   
 
