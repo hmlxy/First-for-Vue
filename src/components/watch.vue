@@ -58,11 +58,11 @@ export default {
 <template>
   <p>
     Ask a yes/no question:
-    <h1>&watch</h1>
+    <p>&watch</p>
     <input v-model="question" />
-    <h1>function</h1>
+    <p>function</p>
     <input v-model="question1" />
-    <h1>computed</h1>
+    <p>computed</p>
     <input v-model="question2" />
   </p>
   <p>{{ answer }}</p>

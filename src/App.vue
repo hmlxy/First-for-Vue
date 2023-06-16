@@ -12,6 +12,7 @@ import vfor from './components/vfor.vue';
 import von from './components/von.vue';
 import vmodel from './components/vmodel.vue';
 import watch from './components/watch.vue';
+import ref from './components/ref.vue';
 
 
 export default {
@@ -28,6 +29,7 @@ export default {
     von,
     vmodel,
     watch,
+    ref,
   },
 
   data(){
@@ -80,6 +82,11 @@ export default {
     <div class="watch gap">
      <h1 class="blue">watch</h1>
     <watch> </watch>
+    </div>
+
+    <div class="ref gap">
+     <h1 class="blue">ref</h1>
+    <ref> </ref>
     </div>
   
 
