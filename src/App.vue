@@ -5,15 +5,15 @@
 
 // 这里引入组件的文件
 import HelloWorld from './components/HelloWorld.vue';
-import methods from './components/methods.vue';
-import computed from './components/computed.vue';
+import Methods from './components/Methods.vue';
+import Computed from './components/Computed.vue';
 import vif from './components/vif.vue';
 import vfor from './components/vfor.vue';
 import von from './components/von.vue';
 import vmodel from './components/vmodel.vue';
 import watch from './components/watch.vue';
 import ref from './components/ref.vue';
-import props from './components/props.vue';
+import Props from './components/Props.vue';
 
 
 export default {
@@ -23,15 +23,15 @@ export default {
   // 这里引用上面定义的组件文件的名称，从而在template中可以通过同样名称的标签名就能使用整个组件的内容，也就是注册子组件
   components: {
     HelloWorld,
-    methods,
-    computed,
+    Methods,
+    Computed,
     vif,
     vfor,
     von,
     vmodel,
     watch,
     ref,
-    props,
+    Props,
   },
 
   data(){
@@ -54,14 +54,14 @@ export default {
     <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <!-- 标签名需要使用组件的名称 -->
-    <div class="mounted gap">
-    <h1 class="blue">methods</h1>
-      <methods></methods>
+    <div class="methods gap">
+    <h1 class="blue">Methods</h1>
+      <Methods></Methods>
     </div>
   
     <div class="computed gap">
-     <h1 class="blue">computed</h1>
-      <computed ></testcomputed2>
+     <h1 class="blue">Computed</h1>
+      <Computed ></Computed>
     </div>
 
     <div class="v-if gap">
@@ -96,8 +96,8 @@ export default {
     </div>
 
     <div class="props gap">
-     <h1 class="blue">props</h1>
-    <props v-for="post in posts" :title="post.title" :id="post.id"></props>
+     <h1 class="blue">Props</h1>
+    <Props v-for="post in posts" :title="post.title" :id="post.id"></Props>
     </div>
   
 
