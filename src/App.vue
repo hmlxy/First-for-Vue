@@ -57,8 +57,11 @@ export default {
 
 <template>
   <div id="app">
-    <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="vue">
+       <img alt="Vue logo" src="https://vuejs.org/images/logo.png" />
+      <HelloWorld msg="Welcome to Your Vue.js App" />
+    </div>
+   
     <!-- 标签名需要使用组件的名称 -->
     <div class="methods gap">
     <h1 class="blue">Methods</h1>
@@ -151,9 +154,13 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-size:20px;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.vue {
+  text-align:center;
 }
 
 .gap {
