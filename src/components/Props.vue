@@ -1,6 +1,18 @@
 <script>
 export default {
-  props: ['title','id']
+  // 使用对象定义prop更加规范
+  props: {
+    title: {
+      type:String,
+      required:true,
+      default:'this is prop title'
+    },
+    id: {
+      type:String,
+      required:true,
+      default:'this is prop id'
+    }
+  }
 }
 </script>
 
