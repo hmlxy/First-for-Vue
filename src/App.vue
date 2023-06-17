@@ -16,6 +16,7 @@ import ref from './components/ref.vue';
 import Props from './components/Props.vue';
 import Emit from './components/Emit.vue';
 import Slot from './components/Slot.vue';
+import Congratulations from './components/Congratulations.vue';
 
 
 export default {
@@ -36,6 +37,7 @@ export default {
     Props,
     Emit,
     Slot,
+    Congratulations,
   },
 
   data(){
@@ -130,6 +132,10 @@ export default {
      <h1 class="blue">Slot</h1>
      <Slot> this is a slot</Slot>
     
+    </div>
+
+    <div class="congra">
+      <Congratulations></Congratulations>
     </div>
   
 
