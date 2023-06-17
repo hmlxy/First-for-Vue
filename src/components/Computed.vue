@@ -1,36 +1,56 @@
 <script>
+let id = 0
+
 export default {
   data() {
     return {
-      author: {
-        name: 'John Doe',
-        books: [
-          {book:'Vue 2 - Advanced Guide'},
-          {book:'Vue 3 - Basic Guide'},
-          {book:'Vue 4 - The Mystery'},
-        ],
-      },
-    };
+      newTodo: '',
+      hideCompleted: false,
+      todos: [
+        { id: id++, text: 'Learn HTML', done: true },
+        { id: id++, text: 'Learn JavaScript', done: true },
+        { id: id++, text: 'Learn Vue', done: false }
+      ]
+    }
   },
   computed: {
-    publishedBooksMessage() {
-      return this.author.books.length > 0 ? 'Yes' : 'No';
-    },
+    filteredTodes(){
+      return this.hideCompleted
+      ?this.todos.filter((t)=> !t.done)
+      :this.todos
+    }
   },
-};
+  methods: {
+    addTodo() {
+      this.todos.push({ id: id++, text: this.newTodo, done: false })
+      this.newTodo = ''
+    },
+    removeTodo(todo) {
+      this.todos = this.todos.filter((t) => t !== todo)
+    }
+  }
+}
 </script>
 
 <template>
-  <p>Has published books:</p>
-  <p>{{ publishedBooksMessage }}</p>
-  <li v-for="(item,index) in author.books">
-    {{author.name}}-{{item.book}}
-  
-  </li>
+  <form @submit.prevent="addTodo">
+    <input v-model="newTodo">
+    <button>Add Todo</button>
+  </form>
+  <ul>
+    <li v-for="todo in filteredTodes" :key="todo.id">
+      <input type="checkbox" v-model="todo.done">
+      <span :class="{ done: todo.done }">{{ todo.text }}</span>
+      <button @click="removeTodo(todo)">X</button>
+    </li>
+  </ul>
+  <button @click="hideCompleted = !hideCompleted">
+    {{ hideCompleted ? 'Show all' : 'Hide completed' }}
+  </button>
 </template>
 
-<style scoped>
-p {
-  font-size: 24px;
+<style>
+.done {
+  text-decoration: line-through;
 }
 </style>
