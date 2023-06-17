@@ -6,15 +6,11 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$refs.items)
+    this.$refs.p.textContent="hello world"
   }
 }
 </script>
 
 <template>
-  <ul>
-    <li v-for="item in list" ref="items">
-      {{ item }}
-    </li>
-  </ul>
+  <p ref="p">hello</p>
 </template>
