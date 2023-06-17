@@ -46,7 +46,7 @@ export default {
         { id: 3, title: 'Why Vue is so fun' }
       ],
 
-      postFontSize: 1
+      textcolor: '',
     }
   },
 
@@ -116,15 +116,12 @@ export default {
 
     <div class="emit gap">
     <h1 class="blue">Emit</h1>
-    <div :style="{ 'font-size': postFontSize + 'em' }">
-      <Emit
-        v-for="post in posts"
-        :id="post.id"
-        :key="post.id"
-        :title="post.title"
-        @enlarge-text="postFontSize += 0.1"
-        @ensamll-text="postFontSize -= 0.1"
+    <div :style="{color:textcolor}">
+      <Emit 
+        @change-red="(msg)=> textcolor=msg"
+        @change-blue="(msg)=> textcolor=msg"
       ></Emit>
+      <p>{{textcolor}}</p>
     </div>
     
     </div>

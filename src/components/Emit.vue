@@ -1,14 +1,22 @@
 <script>
 export default {
   props: ['title','id'],
-  emits: ['enlarge-text','ensamll-text']
+  //声明出触发事件的名称
+  emits: ['change-red','change-blue'],
+  data(){
+    return{
+      redtext:'red',
+      bluetext:'blue'
+    }
+  }
+
 }
 </script>
 
 <template>
   <div class="blog-post">
-	  <h4>{{id}} - {{ title }}</h4>
-	  <button @click="$emit('enlarge-text')">Enlarge text</button>
-    <button @click="$emit('ensamll-text')">EnSmall text</button>
+	  <h4>hello world</h4>
+	  <button @click="$emit('change-red',redtext)">change-red</button>
+    <button @click="$emit('change-blue',bluetext)">change-blue</button>
   </div>
 </template>

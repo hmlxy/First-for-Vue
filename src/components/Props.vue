@@ -8,7 +8,7 @@ export default {
       default:'this is prop title'
     },
     id: {
-      type:String,
+      type:Number,
       required:true,
       default:'this is prop id'
     }
